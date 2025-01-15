@@ -5,8 +5,8 @@
     import Search from "./search.svelte";
 </script>
 
-<div class="w-full border-b flex justify-center">
-    <div class="w-full py-2 px-4 max-w-screen-2xl flex gap-6 justify-between border-x">
+<div class="w-full border-b flex justify-center sticky top-0 backdrop-blur-lg bg-zinc-950/90">
+    <div class="w-full py-2 px-4 max-w-screen-xl flex gap-6 justify-between">
         <div class="w-full flex gap-6 items-center">
             <div class="text-lg font-sans font-bold">david/ref</div>
             <div class="flex gap-4">
