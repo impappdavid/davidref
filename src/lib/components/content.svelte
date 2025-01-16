@@ -1,46 +1,66 @@
 <script>
     import * as Breadcrumb from "$lib/components/ui/breadcrumb";
     import CodeCard from "./CodeCard.svelte";
+    import { page } from "$app/stores";
+    import { data } from "../../routes/javascript/[slug]/data";
+
+    // Get the slug and find current section
+    $: slug = $page.params.slug;
+    $: currentSection = data.find(
+        (section) => section.sectionTitle.toLowerCase().replace(/\s+/g, '') === slug?.toLowerCase().replace(/\s+/g, ''),
+    );
 
     let code = `
 function apple(){
     console.log("hello")
 }
 apple();
-    `
-   
+    `;
 </script>
 
 <div class="w-full max-w-3xl h-full py-4 flex flex-col gap-4">
     <Breadcrumb.Root>
         <Breadcrumb.List>
             <Breadcrumb.Item>
-                <Breadcrumb.Page class="text-zinc-400"
+                <Breadcrumb.Page class="text-zinc-600 dark:text-zinc-400"
                     >Javascript</Breadcrumb.Page
                 >
             </Breadcrumb.Item>
             <Breadcrumb.Separator />
             <Breadcrumb.Item>
-                <Breadcrumb.Page>Introduction</Breadcrumb.Page>
+                <Breadcrumb.Page
+                    >{currentSection?.sectionTitle || ""}</Breadcrumb.Page
+                >
             </Breadcrumb.Item>
         </Breadcrumb.List>
     </Breadcrumb.Root>
-    <div class="flex flex-col gap-2">
-        <div class="text-4xl font-bold">Introduction</div>
-        <div class="text-zinc-400">
-            Re-usable components built with Bits UI, Melt UI, and Tailwind CSS.
+
+    {#if currentSection}
+        <div class="flex flex-col gap-2">
+            <div class="text-4xl font-bold">{currentSection.sectionTitle}</div>
+            <div class="text-zinc-600 dark:text-zinc-400">
+                {currentSection.description}
+            </div>
         </div>
-    </div>
-    <div class="">
-        An unofficial, community-led Svelte port of shadcn/ui. We are not affiliated with shadcn, but we did get his blessing before creating a Svelte version of his work. This project was born out of the need for a similar project for the Svelte ecosystem.
-    </div>
-    <div class="">
-        This is NOT a component library. It's a collection of re-usable components that you can copy and paste or use the CLI to add to your apps.
-    </div>
 
-    <div class="font-semibold">What do you mean not a component library?</div>
+        {#each currentSection.littleSections as section}
+            <div class="font-semibold text-xl mt-4" id={section.name}>{section.name}</div>
+            
+            {#each section.descriptions as desc}
+                <div class="mt-2">
+                    <div class="font-semibold">{desc.name}</div>
+                    <div class="text-zinc-600 dark:text-zinc-400">{desc.desc}</div>
+                </div>
+            {/each}
+        {/each}
 
-    <div class="">It means you do not install it as a dependency. It is not available or distributed via npm, with no plans to publish it.</div>
-
-    <CodeCard code={code} />
+        {#if currentSection.code}
+            <CodeCard 
+                code={currentSection.code} 
+                output={currentSection.output}
+            />
+        {/if}
+    {:else}
+        <div>Section not found</div>
+    {/if}
 </div>
