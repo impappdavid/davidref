@@ -10,15 +10,10 @@
         (section) => section.sectionTitle.toLowerCase().replace(/\s+/g, '') === slug?.toLowerCase().replace(/\s+/g, ''),
     );
 
-    let code = `
-function apple(){
-    console.log("hello")
-}
-apple();
-    `;
+   
 </script>
 
-<div class="w-full max-w-3xl h-full py-4 flex flex-col gap-4">
+<div class="w-full max-w-3xl h-full py-6  flex flex-col gap-4">
     <Breadcrumb.Root>
         <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -44,22 +39,23 @@ apple();
         </div>
 
         {#each currentSection.littleSections as section}
-            <div class="font-semibold text-xl mt-4" id={section.name}>{section.name}</div>
+            <div class="font-semibold text-xl mt-4 " id={section.name}>{section.name}</div>
             
             {#each section.descriptions as desc}
-                <div class="mt-2">
+                <div class="flex flex-col gap-0">
                     <div class="font-semibold">{desc.name}</div>
                     <div class="text-zinc-600 dark:text-zinc-400">{desc.desc}</div>
                 </div>
             {/each}
-        {/each}
-
-        {#if currentSection.code}
+            {#if section.code}
             <CodeCard 
-                code={currentSection.code} 
-                output={currentSection.output}
+                code={section.code} 
+                output={section.output}
             />
         {/if}
+        {/each}
+
+        
     {:else}
         <div>Section not found</div>
     {/if}
