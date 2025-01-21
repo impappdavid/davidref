@@ -403,5 +403,227 @@ operate(add, 3, 4);
 
         ],
 
-    }
+    },
+    {
+        sectionTitle: "Objects",
+        littleTitle: "",
+        description: "In JavaScript, objects are collections of key-value pairs, where each key (also called a property) is a string, and the value can be any data type. Objects are useful for storing related data together.",
+        littleSections: [
+            {
+                name: "Creating an Object",
+                descriptions: [
+                    {
+                        desc: "You can create an object using either the object literal syntax or the new Object() syntax.",
+                    },
+                ],
+                code: `
+const person = new Object();
+person.name = 'John';
+person.age = 30;
+person.greet = function() {
+  console.log('Hello!');
+};
+
+`,
+                output: "",
+            },
+            {
+                name: "Object Literal Syntax",
+                descriptions: [
+                    {
+                        desc: "Assigns a function to a variable.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log('Hello!');
+  }
+};
+
+`,
+                output: "",
+            },
+           
+           
+
+        ],
+
+    },
+    {
+        sectionTitle: "Object properties",
+        littleTitle: "",
+        description: "Object properties are the key-value pairs that define the characteristics of an object. Each property has a name (key) and a value.",
+        littleSections: [
+            {
+                name: "Accessing Properties",
+                descriptions: [
+                    {
+                        desc: "You can access an object's properties using dot notation or bracket notation.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log('Hello!');
+  }
+};
+
+console.log(person.name); // Accessing property using dot notation
+console.log(person['name']); // Accessing property using bracket notation
+
+`,
+                output: "John",
+            },
+            {
+                name: "Adding or Updating Properties",
+                descriptions: [
+                    {
+                        desc: "You can also access an object's properties using bracket notation.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+};
+
+person.name = 'Jane';  // Update property
+person.city = 'New York';  // Add new property
+
+console.log(person.name, person.city); 
+
+`,
+                output: "Jane New York",
+            },
+            {
+                name: " Deleting Properties",
+                descriptions: [
+                    {
+                        desc: "You can remove properties from an object using the delete keyword.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+};
+
+delete person.age;
+
+`,
+                output: "",
+            },
+            {
+                name: "Nested Objects",
+                descriptions: [
+                    {
+                        desc: "Objects can contain other objects as values.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  address: {
+    street: '123 Main St',
+    city: 'New York'
+  }
+};
+
+console.log(person.address.city); 
+
+`,
+                output: "New York",
+            },
+           
+
+        ],
+
+    },
+
+    {
+        sectionTitle: "Object Methods",
+        littleTitle: "",
+        description: "Objects can contain functions as values, called methods.",
+        littleSections: [
+            {
+                name: "Creating an Object Method",
+                descriptions: [
+                    {
+                        desc: "You can create an object method by assigning a function to a property.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log('Hello!');
+  }
+};
+
+`,
+                output: "",
+            },
+            {
+                name: "Accessing Object Methods",
+                descriptions: [
+                    {
+                        desc: "You can access an object's methods using dot notation or bracket notation.",
+                    },
+                ],
+                code: `
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log('Hello!');
+  }
+};
+
+person.greet();
+
+`,
+                output: "Hello!",
+            },
+           
+           
+
+        ],
+
+    },
+    {
+        sectionTitle: "Object Constructors",
+        littleTitle: "",
+        description: "Object constructors are functions that create objects.",
+        littleSections: [
+            {
+                name: "Creating an Object Constructor",
+                descriptions: [
+                    {
+                        desc: "You can create an object constructor by using the new keyword.",
+                    },
+                ],
+                code: `
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const person1 = new Person('John', 30);
+console.log(person1.name);
+
+
+`,
+                output: "John",
+            },
+        ],
+
+    },
+           
+
 ];

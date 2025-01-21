@@ -5,7 +5,7 @@
     <h1 class="text-5xl font-bold font-mono">david/ref</h1>
     <div class="flex text-center">
         <a
-            href="/javascript/introduction"
+            href="/javascript/comments"
             class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
