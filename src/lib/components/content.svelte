@@ -3,17 +3,30 @@
     import CodeCard from "./CodeCard.svelte";
     import { page } from "$app/stores";
     import { data } from "../../routes/javascript/[slug]/data";
+    import { onMount, afterUpdate } from 'svelte';
 
-    // Get the slug and find current section
+    // Make this reactive by using $: 
     $: slug = $page.params.slug;
     $: currentSection = data.find(
-        (section) => section.sectionTitle.toLowerCase().replace(/\s+/g, '') === slug?.toLowerCase().replace(/\s+/g, ''),
+        (section) => section.sectionTitle.toLowerCase().replace(/\s+/g, '') === slug?.toLowerCase().replace(/\s+/g, '')
     );
 
-   
+    // Add more detailed debugging
+    $: {
+        console.log('Slug changed to:', slug);
+        if (currentSection) {
+            console.log('Current section:', currentSection.sectionTitle);
+            console.log('Section content:', currentSection.littleSections);
+        }
+    }
+
+    // Add afterUpdate to handle route changes
+    afterUpdate(() => {
+        console.log('Component updated');
+    });
 </script>
 
-<div class="w-full max-w-3xl h-full py-6  flex flex-col gap-4">
+<div class="w-full lg:max-w-3xl h-full py-6  flex flex-col gap-4 xl:px-0 px-4">
     <Breadcrumb.Root>
         <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -38,8 +51,8 @@
             </div>
         </div>
 
-        {#each currentSection.littleSections as section}
-            <div class="font-semibold text-xl mt-4 " id={section.name}>{section.name}</div>
+        {#each currentSection.littleSections as section (section.name)}
+            <div class="font-semibold text-xl mt-4" id={section.name}>{section.name}</div>
             
             {#each section.descriptions as desc}
                 <div class="flex flex-col gap-0">
@@ -48,11 +61,11 @@
                 </div>
             {/each}
             {#if section.code}
-            <CodeCard 
-                code={section.code} 
-                output={section.output}
-            />
-        {/if}
+                <CodeCard 
+                    code={section.code} 
+                    output={section.output}
+                />
+            {/if}
         {/each}
 
         

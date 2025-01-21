@@ -1,15 +1,21 @@
 <script>
     import { data } from "../../routes/javascript/[slug]/data";
     import { page } from "$app/stores";
-    // Get the slug and find current section
+    
     $: slug = $page.params.slug;
     $: currentSection = data.find(
-        (section) => section.sectionTitle.toLowerCase() === slug?.toLowerCase(),
+        (section) => section.sectionTitle.toLowerCase().replace(/\s+/g, '') === slug?.toLowerCase().replace(/\s+/g, ''),
     );
+
+    // Add debug logging
+    $: {
+        console.log('OnThisPage - Slug:', slug);
+        console.log('OnThisPage - Current Section:', currentSection?.sectionTitle);
+    }
 </script>
 
 <div
-    class="w-80 h-full max-h-[915px] px-4 py-4 overflow-y-auto flex flex-col gap-8 sticky top-14"
+    class="w-80 h-full max-h-[915px] px-4 py-4 overflow-y-auto flex flex-col gap-8 sticky top-14 xl:flex hidden"
 >
     <div class="flex flex-col gap-3">
         <div class="text-sm font-bold">On This Page</div>

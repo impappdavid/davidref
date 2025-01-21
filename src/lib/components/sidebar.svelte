@@ -2,7 +2,7 @@
     import { page } from '$app/stores';
 </script>
 <div
-    class="w-80 h-full max-h-[915px] px-4 py-4 overflow-y-auto flex flex-col gap-8 sticky top-14"
+    class="w-80 h-full max-h-[915px] px-4 py-4 overflow-y-auto flex-col gap-8 sticky top-14 lg:flex hidden"
 >
     
     <div class="flex flex-col gap-3">

@@ -3,10 +3,10 @@
 
 <div class="w-full flex flex-col gap-6 justify-center items-center h-screen">
     <h1 class="text-5xl font-bold font-mono">david/ref</h1>
-    <div class="flex text-center">
+    <div class="grid grid-cols-2 sm:grid-cols-5 text-center">
         <a
             href="/javascript/comments"
-            class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
+            class="p-4 tracking-wide hover:bg-zinc-900/50 aspect-square justify-center hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,10 @@
                 /></svg
             >
             <span class="text-zinc-400 text-md">[Javascript]</span>
-            <span class="text-zinc-400 text-xs">Learn</span>
         </a>
         <a
             href="#"
-            class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
+            class="p-4 tracking-wide hover:bg-zinc-900/50 aspect-square justify-center hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,11 +34,10 @@
                 /></svg
             >
             <span class="text-zinc-400 text-md">[Typescript]</span>
-            <span class="text-zinc-400 text-xs">Learn</span>
         </a>
         <a
             href="#"
-            class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
+            class="p-4 tracking-wide hover:bg-zinc-900/50 aspect-square justify-center hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,11 +99,10 @@
                 /></svg
             >
             <span class="text-zinc-400 text-md">[Python]</span>
-            <span class="text-zinc-400 text-xs">Learn</span>
         </a>
         <a
             href="#"
-            class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
+            class="p-4 tracking-wide hover:bg-zinc-900/50 aspect-square justify-center hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,11 +118,10 @@
                 /></svg
             >
             <span class="text-zinc-400 text-md">[Sveltekit]</span>
-            <span class="text-zinc-400 text-xs">Learn</span>
         </a>
         <a
             href="#"
-            class="p-4 tracking-wide hover:bg-zinc-800/50 hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
+            class="p-4 tracking-wide hover:bg-zinc-900/50 aspect-square justify-center hover:text-yellow-400 transition-all flex flex-col gap-2 items-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +134,6 @@
                 /></svg
             >
             <span class="text-zinc-400 text-md">[NestJs]</span>
-            <span class="text-zinc-400 text-xs">Learn</span>
         </a>
     </div>
 </div>
