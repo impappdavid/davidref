@@ -10,27 +10,13 @@
         <div class="w-full flex gap-6 items-center">
             <div class="text-lg font-sans font-bold">david/ref</div>
             <div class="flex gap-4">
-                <a href="#" class="text-black dark:text-white  text-md font-sans">Javascript</a>
+                <a href="#" class="text-black dark:text-white  text-md font-sans">Docs</a>
                 <a
                     href="#"
                     class="text-zinc-600 dark:text-zinc-400 text-md font-sans hover:text-black dark:hover:text-white"
-                    >Typescript</a
+                    >Examples</a
                 >
-                <a
-                    href="#"
-                    class="text-zinc-600 dark:text-zinc-400 text-md font-sans hover:text-black dark:hover:text-white"
-                    >Python</a
-                >
-                <a
-                    href="#"
-                    class="text-zinc-600 dark:text-zinc-400 text-md font-sans hover:text-black dark:hover:text-white"
-                    >Sveltekit</a
-                >
-                <a
-                    href="#"
-                    class="text-zinc-600 dark:text-zinc-400 text-md font-sans hover:text-black dark:hover:text-white"
-                    >Nestjs</a
-                >
+               
             </div>
         </div>
         <div class="flex gap-1">
