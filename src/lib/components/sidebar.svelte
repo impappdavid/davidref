@@ -62,10 +62,7 @@
                 href="./stringmethods" 
                 class="text-sm hover:underline {$page.url.pathname.endsWith('stringmethods') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
             >String Methods</a>
-            <a 
-                href="./stringsearch" 
-                class="text-sm hover:underline {$page.url.pathname.endsWith('stringsearch') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
-            >String Search</a>
+            
            
         </div>
     </div>

@@ -1,4 +1,6 @@
 export const data = [
+
+    //Comments
     {
         sectionTitle: "Comments",
         littleTitle: "",
@@ -37,6 +39,8 @@ console.log("Hello World!")
         ],
 
     },
+
+    //Variables
     {
         sectionTitle: "Variables",
         littleTitle: "",
@@ -94,6 +98,8 @@ console.log(age);
         ],
 
     },
+
+    //Operators
     {
         sectionTitle: "Operators",
         littleTitle: "",
@@ -192,6 +198,8 @@ console.log(status);
         ],
 
     },
+
+    //Data Types
     {
         sectionTitle: "Data Types",
         littleTitle: "",
@@ -283,6 +291,8 @@ let user = null;
         ],
 
     },
+
+    //Functions
     {
         sectionTitle: "Functions",
         littleTitle: "",
@@ -404,6 +414,8 @@ operate(add, 3, 4);
         ],
 
     },
+
+    //Objects
     {
         sectionTitle: "Objects",
         littleTitle: "",
@@ -446,12 +458,10 @@ const person = {
 `,
                 output: "",
             },
-           
-           
-
         ],
-
     },
+
+    //Object properties
     {
         sectionTitle: "Object properties",
         littleTitle: "",
@@ -545,6 +555,7 @@ console.log(person.address.city);
 
     },
 
+    //Object methods
     {
         sectionTitle: "Object Methods",
         littleTitle: "",
@@ -596,6 +607,8 @@ person.greet();
         ],
 
     },
+
+    //Object Constructors
     {
         sectionTitle: "Object Constructors",
         littleTitle: "",
@@ -624,6 +637,440 @@ console.log(person1.name);
         ],
 
     },
-           
+
+    //Strings
+    {
+        sectionTitle: "Strings",
+        littleTitle: "",
+        description: "Strings are used to represent text in JavaScript. They can be enclosed in single or double quotes.",
+        littleSections: [
+            {
+                name: "String Concatenation",
+                descriptions: [
+                    {
+                        desc: "To concatenate strings, you can use the + operator.",
+                    },
+                ],
+                code: `
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName;
+console.log(fullName);
+
+`,
+                output: "John Doe",
+            },
+            {
+                name: "String Length",
+                descriptions: [
+                    {
+                        desc: "To get the length of a string, you can use the length property.",
+                    },
+                ],
+                code: `
+let message = "Hello, World!";
+console.log(message.length);
+
+`,
+                output: "13",
+            },
+            {
+                name: "Quotes Inside Quotes",
+                descriptions: [
+                    {
+                        desc: "You can use single quotes inside double quotes or double quotes inside single quotes.",
+                    },
+                ],
+                code: `
+let message = "He said, 'Hello!'";
+console.log(message);
+
+`,
+                output: "He said, 'Hello!'",
+            },
+            {
+                name: "Escape Characters",
+                descriptions: [
+                    {
+                        desc: "You can use escape characters to include special characters in a string.",
+                    },
+                ],
+                code: `
+/*
+Examples
+
+\\b - Backspace
+\\t - Tab
+\\n - New line
+\\r - Carriage return
+\\' - Single quote
+\\" - Double quote
+\\ - Backslash
+*/
+
+let message = "He said, \\'Hello!\\'";
+console.log(message);
+
+`,
+                output: "He said, 'Hello!'",
+            },
+            {
+                name: "Breaking Long Lines",
+                descriptions: [
+                    {
+                        desc: "You can use the backslash character to break a long line into multiple lines.",
+                    },
+                ],
+                code: `
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+
+document.getElementById("demo").innerHTML = "Hello " +
+"Dolly!";
+
+`,
+                output: "This is a long message that needs to be broken into multiple lines.",
+            },
+
+            {
+                name: "Template Strings",
+                descriptions: [
+                    {
+                        desc: "Template strings are a way to create strings with variables.",
+                    },
+                ],
+                code: `
+let text =
+\`The quick
+brown fox
+jumps over
+the lazy dog\`;
+
+`,
+                output: "The quick brown fox jumps over the lazy dog",
+            },
+            
+        ],
+
+    },
+
+    //String Methods
+    {
+        sectionTitle: "String Methods",
+        littleTitle: "",
+        description: "JavaScript provides various string methods to manipulate and work with strings.",
+        littleSections: [
+            {
+                name: "length",
+                descriptions: [
+                    {
+                        desc: "Returns the length of a string.",
+                    },
+                ],
+                code: `
+const str = "Hello";
+console.log(str.length);
+
+`,
+                output: "5",
+            },
+            {
+                name: "toUpperCase()",
+                descriptions: [
+                    {
+                        desc: "Converts the string to uppercase.",
+                    },
+                ],
+                code: `
+const str = "hello";
+console.log(str.toUpperCase());
+
+`,
+                output: "HELLO",
+            },
+            {
+                name: "toLowerCase()",
+                descriptions: [
+                    {
+                        desc: "Converts the string to lowercase.",
+                    },
+                ],
+                code: `
+const str = "HELLO";
+console.log(str.toLowerCase());
+
+`,
+                output: "hello",
+            },
+            {
+                name: "charAt(index)",
+                descriptions: [
+                    {
+                        desc: "Returns the character at a specified index.",
+                    },
+                ],
+                code: `
+const str = "Hello";
+console.log(str.charAt(1)); 
+
+`,
+                output: "e",
+            },
+            {
+                name: "indexOf(substring)",
+                descriptions: [
+                    {
+                        desc: "Returns the index of the first occurrence of the specified substring, or -1 if not found.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.indexOf("World")); 
+
+`,
+                output: "6",
+            },
+            {
+                name: "lastIndexOf(substring)",
+                descriptions: [
+                    {
+                        desc: "Finds the last occurrence of a specified substring in a string. Returns the index of the last match or -1 if not found.",
+                    },
+                ],
+                code: `
+const str = "Hello World, Hello JavaScript!";
+console.log(str.lastIndexOf("Hello")); // 13
+console.log(str.lastIndexOf("Python")); // -1
+
+`,
+                output: "",
+            },
+
+            {
+                name: "includes(substring)",
+                descriptions: [
+                    {
+                        desc: "Checks if the string contains a specified substring, returning true or false.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.includes("World"));
+
+`,
+                output: "true",
+            },
+            {
+                name: "slice(start, end)",
+                descriptions: [
+                    {
+                        desc: "Extracts a portion of the string from the start index to (but not including) the end index.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.slice(0, 5)); 
+
+`,
+                output: "Hello",
+            },
+            {
+                name: "substring(start, end)",
+                descriptions: [
+                    {
+                        desc: "Similar to slice, but does not accept negative indices.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.substring(0, 5));
+
+`,
+                output: "Hello",
+            },
+            {
+                name: "trim()",
+                descriptions: [
+                    {
+                        desc: "Removes whitespace from both ends of the string.",
+                    },
+                ],
+                code: `
+const str = "   Hello World   ";
+console.log(str.trim()); // "Hello World"
+
+`,
+                output: "Hello World",
+            },
+            {
+                name: "replace(searchValue, newValue)",
+                descriptions: [
+                    {
+                        desc: "Replaces the first occurrence of a substring with a new value.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.replace("World", "JavaScript"));
+`,
+                output: "Hello JavaScript",
+            },
+            {
+                name: "split(delimiter)",
+                descriptions: [
+                    {
+                        desc: "Splits a string into an array of substrings based on the specified delimiter.",
+                    },
+                ],
+                code: `
+const str = "apple,banana,grape";
+console.log(str.split(","));
+
+`,
+                output: '["apple", "banana", "grape"]',
+            },
+            {
+                name: "concat(...strings)",
+                descriptions: [
+                    {
+                        desc: "Joins two or more strings and returns a new string.",
+                    },
+                ],
+                code: `
+const str1 = "Hello";
+const str2 = "World";
+console.log(str1.concat(" ", str2)); 
+
+`,
+                output: 'Hello World',
+            },
+            {
+                name: "startsWith(substring)",
+                descriptions: [
+                    {
+                        desc: "Checks if the string starts with the specified substring.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.startsWith("Hello"));
+
+`,
+                output: 'true',
+            },
+            {
+                name: "endsWith(substring)",
+                descriptions: [
+                    {
+                        desc: "Checks if the string ends with the specified substring.",
+                    },
+                ],
+                code: `
+const str = "Hello World";
+console.log(str.endsWith("World"));
+
+`,
+                output: 'true',
+            },
+            {
+                name: "repeat(count)",
+                descriptions: [
+                    {
+                        desc: "Repeats the string count times.",
+                    },
+                ],
+                code: `
+const str = "Hello";
+console.log(str.repeat(3)); 
+
+`,
+                output: 'HelloHelloHello',
+            },
+            {
+                name: "padStart(targetLength, padString)",
+                descriptions: [
+                    {
+                        desc: "Pads the string at the start to reach the target length.",
+                    },
+                ],
+                code: `
+const str = "5";
+console.log(str.padStart(3, "0"));
+
+`,
+                output: '005',
+            },
+            {
+                name: "padEnd(targetLength, padString)",
+                descriptions: [
+                    {
+                        desc: "Pads the string at the end to reach the target length.",
+                    },
+                ],
+                code: `
+const str = "5";
+console.log(str.padEnd(3, "0"));
+
+`,
+                output: '500',
+            },
+            {
+                name: "search(regExp)",
+                descriptions: [
+                    {
+                        desc: "Searches for a substring or matches a regular expression in a string. Returns the index of the first match, or -1 if not found.",
+                    },
+                ],
+                code: `
+const str = "Hello JavaScript!";
+console.log(str.search("JavaScript")); // 6
+console.log(str.search(/script/i));    // 10 (case-insensitive)
+
+`,
+                output: '',
+            },
+            {
+                name: "match(regExp)",
+                descriptions: [
+                    {
+                        desc: "Matches a regular expression against a string. ",
+                    },
+                ],
+                code: `
+const str = "cat, bat, mat";
+console.log(str.match(/at/));       // ["at"] (first match only)
+console.log(str.match(/at/g));     // ["at", "at", "at"] (global matches)
+console.log(str.match(/dog/));     // null (no match)
+
+`,
+                output: '',
+            },
+            {
+                name: "matchAll(regExp)",
+                descriptions: [
+                    {
+                        desc: "Returns an iterator of all matches (useful for advanced patterns or accessing groups). Requires the g (global) flag in the regular expression. ",
+                    },
+                ],
+                code: `
+const str = "cat, bat, mat";
+const matches = str.matchAll(/(b|m)at/g);
+
+for (const match of matches) {
+  console.log(match);
+}
+// Output:
+// ["bat", "b"]
+// ["mat", "m"]
+
+`,
+                output: '',
+            },
+            
+        ],
+
+    },
+
+    
 
 ];
