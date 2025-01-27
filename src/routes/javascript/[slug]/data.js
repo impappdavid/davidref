@@ -409,7 +409,7 @@ operate(add, 3, 4);
 `,
                 output: "7",
             },
-           
+
 
         ],
 
@@ -549,7 +549,7 @@ console.log(person.address.city);
 `,
                 output: "New York",
             },
-           
+
 
         ],
 
@@ -601,8 +601,8 @@ person.greet();
 `,
                 output: "Hello!",
             },
-           
-           
+
+
 
         ],
 
@@ -749,7 +749,7 @@ the lazy dog\`;
 `,
                 output: "The quick brown fox jumps over the lazy dog",
             },
-            
+
         ],
 
     },
@@ -1066,11 +1066,12 @@ for (const match of matches) {
 `,
                 output: '',
             },
-            
+
         ],
 
     },
-
     
+
+
 
 ];

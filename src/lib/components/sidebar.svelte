@@ -66,4 +66,27 @@
            
         </div>
     </div>
+
+    <div class="flex flex-col gap-3">
+        <div class="text-sm font-bold">Numbers</div>
+        <div class="flex flex-col gap-2">
+            <a 
+                href="./numbers" 
+                class="text-sm hover:underline {$page.url.pathname.endsWith('numbers') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
+            >Numbers</a>
+            <a 
+                href="./bigint" 
+                class="text-sm hover:underline {$page.url.pathname.endsWith('bigint') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
+            >BigInt</a>
+            <a 
+                href="./numbermethods" 
+                class="text-sm hover:underline {$page.url.pathname.endsWith('numbermethods') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
+            >Number Methods</a>
+            <a 
+                href="./numberproperties" 
+                class="text-sm hover:underline {$page.url.pathname.endsWith('numberproperties') ? 'text-black dark:text-white font-medium' : 'text-zinc-600 dark:text-zinc-400'}"
+            >Number Properties</a>
+        </div>
+    </div>
+
 </div>
