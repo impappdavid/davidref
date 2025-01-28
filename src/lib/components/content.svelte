@@ -28,7 +28,7 @@
     });
 </script>
 
-<div class="w-full lg:max-w-3xl h-full py-8 flex flex-col gap-8 xl:px-0 px-4">
+<div class="w-full lg:max-w-3xl h-full py-8 flex flex-col gap-6 xl:px-2 px-4">
     <Breadcrumb.Root>
         <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -46,16 +46,16 @@
     </Breadcrumb.Root>
 
     {#if currentSection}
-        <div class="flex flex-col gap-2">
-            <div class="text-4xl font-bold">{currentSection.sectionTitle}</div>
-            <div class="text-zinc-600 dark:text-zinc-400">
+            <div class="flex flex-col gap-2">
+                <div class="text-4xl font-bold">{currentSection.sectionTitle}</div>
+                <div class="text-zinc-600 dark:text-zinc-400">
                 {currentSection.description}
             </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-0">
             {#each currentSection.littleSections as section (section.name)}
-                <div class="flex flex-col gap-1">
-                    <div class="font-semibold text-xl" id={section.name}>
+                <div class="flex flex-col " id={section.name}>
+                    <div class="font-semibold text-xl mt-14" >
                         {section.name}
                     </div>
 

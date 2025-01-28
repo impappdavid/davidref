@@ -18,7 +18,7 @@ export const data = [
 console.log("Hello World!")
 
 `,
-                output: "Hello World!",
+                output: ["Hello World!"],
             },
             {
                 name: "Multiple line comment",
@@ -34,7 +34,7 @@ console.log("Hello World!")
 */
 
 `,
-                output: "",
+                output: [],
             },
         ],
 
@@ -50,7 +50,7 @@ console.log("Hello World!")
                 name: "Let",
                 descriptions: [
                     {
-                        desc: "he let keyword in JavaScript is used to declare a variable that can be reassigned later. It's block-scoped, meaning it only exists within the block (like a function or loop) where it's defined.",
+                        desc: "The let keyword in JavaScript is used to declare a variable that can be reassigned later. It's block-scoped, meaning it only exists within the block (like a function or loop) where it's defined.",
                     },
                 ],
                 code: `
@@ -59,7 +59,7 @@ age = 26; // reassignment is allowed
 console.log(age);
 
 `,
-                output: "26",
+                output: ["26"],
             },
             {
                 name: "Const",
@@ -74,9 +74,10 @@ pi = 3.14159; // Error: reassignment is not allowed
 
 const person = { name: 'John' };
 person.name = 'Jane'; // Allowed: object content can change
+console.log(person.name);
 
 `,
-                output: "",
+                output: ['Jane'],
             },
             {
                 name: "Var",
@@ -93,7 +94,7 @@ var age = 30; // redeclaration is allowed (not recommended)
 console.log(age);
 
 `,
-                output: "30",
+                output: ["30"],
             },
         ],
 
@@ -122,7 +123,7 @@ console.log(age);
 -- //decrement  
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Assignment Operators",
@@ -140,7 +141,7 @@ console.log(age);
 %= //modulus and assign
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Comparison Operators",
@@ -160,7 +161,7 @@ console.log(age);
 <= //less than or equal to
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Logical Operators",
@@ -175,7 +176,7 @@ console.log(age);
 ! //NOT
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Conditional (Ternary) Operator",
@@ -192,7 +193,7 @@ let status = active ? "Active" : "Inactive";
 console.log(status);
 
 `,
-                output: "Active",
+                output: ["Active"],
             },
 
         ],
@@ -217,7 +218,7 @@ let firstName = "John";
 let lastName = 'Doe';
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Number",
@@ -231,7 +232,7 @@ let stock = 25;
 let price = 19.99;
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "BigInt",
@@ -244,7 +245,7 @@ let price = 19.99;
 let bigNumber = 1234567890123456789012345678901234567890n;
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Boolean",
@@ -258,7 +259,7 @@ let isActive = true;
 let isLoggedIn = false;
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Undefined",
@@ -272,7 +273,7 @@ let age;
 console.log(age);
 
 `,
-                output: "undefined",
+                output: ["undefined"],
             },
             {
                 name: "Null",
@@ -314,7 +315,7 @@ let result = greet("John");
 console.log(result);
 
 `,
-                output: "Hello, John",
+                output: ["Hello, John"],
             },
             {
                 name: "Function Expression",
@@ -332,7 +333,7 @@ let result = greet("John");
 console.log(result);
 
 `,
-                output: "Hello, John",
+                output: ["Hello, John"],
             },
             {
                 name: "Arrow Function",
@@ -350,7 +351,7 @@ let result = greet("John");
 console.log(result);
 
 `,
-                output: "Hello, John",
+                output: ["Hello, John"],
             },
             {
                 name: "Default Parameters",
@@ -368,7 +369,7 @@ let result = greet();
 console.log(result);
 
 `,
-                output: "Hello, Guest",
+                output: ["Hello, Guest"],
             },
             {
                 name: "Rest Parameters",
@@ -386,7 +387,7 @@ let result = sum(1, 2, 3, 4, 5);
 console.log(result);
 
 `,
-                output: "15",
+                output: ["15"],
             },
             {
                 name: "Higher-Order Functions",
@@ -407,7 +408,7 @@ function operate(fn, a, b) {
 operate(add, 3, 4);
 
 `,
-                output: "7",
+                output: [],
             },
 
 
@@ -437,7 +438,7 @@ person.greet = function() {
 };
 
 `,
-                output: "",
+                output: [],
             },
             {
                 name: "Object Literal Syntax",
@@ -456,7 +457,7 @@ const person = {
 };
 
 `,
-                output: "",
+                output: [],
             },
         ],
     },
@@ -487,7 +488,7 @@ console.log(person.name); // Accessing property using dot notation
 console.log(person['name']); // Accessing property using bracket notation
 
 `,
-                output: "John",
+                output: ["John", "John"],
             },
             {
                 name: "Adding or Updating Properties",
@@ -508,7 +509,7 @@ person.city = 'New York';  // Add new property
 console.log(person.name, person.city); 
 
 `,
-                output: "Jane New York",
+                output: ["Jane New York"],
             },
             {
                 name: " Deleting Properties",
@@ -525,8 +526,9 @@ const person = {
 
 delete person.age;
 
+console.log(person);
 `,
-                output: "",
+                output: ["{ name: 'John' }"],
             },
             {
                 name: "Nested Objects",
@@ -547,7 +549,7 @@ const person = {
 console.log(person.address.city); 
 
 `,
-                output: "New York",
+                output: ["New York"],
             },
 
 
@@ -578,7 +580,7 @@ const person = {
 };
 
 `,
-                output: "",
+                output: ["Hello!"],
             },
             {
                 name: "Accessing Object Methods",
@@ -599,7 +601,7 @@ const person = {
 person.greet();
 
 `,
-                output: "Hello!",
+                output: ["Hello!"],
             },
 
 
@@ -632,7 +634,7 @@ console.log(person1.name);
 
 
 `,
-                output: "John",
+                output: ["John"],
             },
         ],
 
@@ -658,7 +660,7 @@ let fullName = firstName + " " + lastName;
 console.log(fullName);
 
 `,
-                output: "John Doe",
+                output: ["John Doe"],
             },
             {
                 name: "String Length",
@@ -672,7 +674,7 @@ let message = "Hello, World!";
 console.log(message.length);
 
 `,
-                output: "13",
+                output: ["13"],
             },
             {
                 name: "Quotes Inside Quotes",
@@ -686,7 +688,7 @@ let message = "He said, 'Hello!'";
 console.log(message);
 
 `,
-                output: "He said, 'Hello!'",
+                output: ["He said, 'Hello!'"],
             },
             {
                 name: "Escape Characters",
@@ -712,7 +714,7 @@ let message = "He said, \\'Hello!\\'";
 console.log(message);
 
 `,
-                output: "He said, 'Hello!'",
+                output: ["He said, 'Hello!'"],
             },
             {
                 name: "Breaking Long Lines",
@@ -729,7 +731,7 @@ document.getElementById("demo").innerHTML = "Hello " +
 "Dolly!";
 
 `,
-                output: "This is a long message that needs to be broken into multiple lines.",
+                output: ["This is a long message that needs to be broken into multiple lines."],
             },
 
             {
@@ -747,7 +749,7 @@ jumps over
 the lazy dog\`;
 
 `,
-                output: "The quick brown fox jumps over the lazy dog",
+                output: ["The quick brown fox jumps over the lazy dog"],
             },
 
         ],
@@ -772,7 +774,7 @@ const str = "Hello";
 console.log(str.length);
 
 `,
-                output: "5",
+                output: ["5"],
             },
             {
                 name: "toUpperCase()",
@@ -786,7 +788,7 @@ const str = "hello";
 console.log(str.toUpperCase());
 
 `,
-                output: "HELLO",
+                output: ["HELLO"],
             },
             {
                 name: "toLowerCase()",
@@ -800,7 +802,7 @@ const str = "HELLO";
 console.log(str.toLowerCase());
 
 `,
-                output: "hello",
+                output: ["hello"],
             },
             {
                 name: "charAt(index)",
@@ -814,7 +816,7 @@ const str = "Hello";
 console.log(str.charAt(1)); 
 
 `,
-                output: "e",
+                output: ["e"],
             },
             {
                 name: "indexOf(substring)",
@@ -828,7 +830,7 @@ const str = "Hello World";
 console.log(str.indexOf("World")); 
 
 `,
-                output: "6",
+                output: ["6"],
             },
             {
                 name: "lastIndexOf(substring)",
@@ -843,7 +845,7 @@ console.log(str.lastIndexOf("Hello")); // 13
 console.log(str.lastIndexOf("Python")); // -1
 
 `,
-                output: "",
+                output: [13, -1],
             },
 
             {
@@ -858,7 +860,7 @@ const str = "Hello World";
 console.log(str.includes("World"));
 
 `,
-                output: "true",
+                output: ["true"],
             },
             {
                 name: "slice(start, end)",
@@ -872,7 +874,7 @@ const str = "Hello World";
 console.log(str.slice(0, 5)); 
 
 `,
-                output: "Hello",
+                output: ["Hello"],
             },
             {
                 name: "substring(start, end)",
@@ -886,7 +888,7 @@ const str = "Hello World";
 console.log(str.substring(0, 5));
 
 `,
-                output: "Hello",
+                output: ["Hello"],
             },
             {
                 name: "trim()",
@@ -900,7 +902,7 @@ const str = "   Hello World   ";
 console.log(str.trim()); // "Hello World"
 
 `,
-                output: "Hello World",
+                output: ["Hello World"],
             },
             {
                 name: "replace(searchValue, newValue)",
@@ -913,7 +915,7 @@ console.log(str.trim()); // "Hello World"
 const str = "Hello World";
 console.log(str.replace("World", "JavaScript"));
 `,
-                output: "Hello JavaScript",
+                output: ["Hello JavaScript"],
             },
             {
                 name: "split(delimiter)",
@@ -927,7 +929,7 @@ const str = "apple,banana,grape";
 console.log(str.split(","));
 
 `,
-                output: '["apple", "banana", "grape"]',
+                output: ['["apple", "banana", "grape"]'],
             },
             {
                 name: "concat(...strings)",
@@ -942,7 +944,7 @@ const str2 = "World";
 console.log(str1.concat(" ", str2)); 
 
 `,
-                output: 'Hello World',
+                output: ['Hello World'],
             },
             {
                 name: "startsWith(substring)",
@@ -970,7 +972,7 @@ const str = "Hello World";
 console.log(str.endsWith("World"));
 
 `,
-                output: 'true',
+                output: ['true'],
             },
             {
                 name: "repeat(count)",
@@ -998,7 +1000,7 @@ const str = "5";
 console.log(str.padStart(3, "0"));
 
 `,
-                output: '005',
+                output: ['005'],
             },
             {
                 name: "padEnd(targetLength, padString)",
@@ -1012,7 +1014,7 @@ const str = "5";
 console.log(str.padEnd(3, "0"));
 
 `,
-                output: '500',
+                output: ['500'],
             },
             {
                 name: "search(regExp)",
@@ -1070,8 +1072,463 @@ for (const match of matches) {
         ],
 
     },
-    
 
+    //Numbers
+    {
+        sectionTitle: "Numbers",
+        littleTitle: "",
+        description: "In JavaScript, numbers are used to represent numeric values. They can be integers or floating-point numbers.",
+        littleSections: [
+            {
+                name: "Integer Precision",
+                descriptions: [
+                    {
+                        desc: "Integers (numbers without a period or exponent notation) are accurate up to 15 digits",
+                    },
+                ],
+                code: `
+let x = 999999999999999;   // x will be 999999999999999
+let y = 9999999999999999;  // y will be 10000000000000000
+
+`,
+                output: "",
+            },
+            {
+                name: "Floating Precision",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+//Floating point arithmetic is not always 100% accurate:
+let x = 0.2 + 0.1;  // x will be 0.30000000000000004
+
+//To solve the problem above, it helps to multiply and divide:
+let z = (0.2 * 10 + 0.1 * 10) / 10; // z will be 0.3
+
+`,
+                output: "",
+            },
+            {
+                name: "NaN - Not a Number",
+                descriptions: [
+                    {
+                        desc: "NaN is a JavaScript value that represents Not-a-Number. It is a special value that indicates an invalid or undefined number.",
+                    },
+                ],
+                code: `
+let x = 100 / "Apple";
+console.log(x); 
+
+//However, if the string is numeric, the result will be a number:
+let y = 100 / "10";
+console.log(y); 
+
+`,
+                output: ["NaN", "10"],
+            },
+            {
+                name: "isNaN()",
+                descriptions: [
+                    {
+                        desc: "Checks if a value is NaN.",
+                    },
+                ],
+                code: `
+let x = 100 / "Apple";
+console.log(isNaN(x));
+
+`,
+                output: ["true"],
+            },
+            {
+                name: "typeof NaN",
+                descriptions: [
+                    {
+                        desc: "Returns the type of a value.",
+                    },
+                ],
+                code: `
+let x = 100 / "Apple";
+console.log(typeof x);
+
+`,
+                output: ["number"],
+            },
+            {
+                name: "Infinity",
+                descriptions: [
+                    {
+                        desc: "Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number. Infinity is a number.",
+                    },
+                ],
+                code: `
+//Division by 0 (zero) also generates Infinity:
+let x = 100 / 0;
+console.log(x);
+
+`,
+                output: ["Infinity"],
+            },
+            {
+                name: "Hexadecimal",
+                descriptions: [
+                    {
+                        desc: "Hexadecimal is a base-16 number system. It uses 16 symbols: the numbers 0-9 and the letters A-F.",
+                    },
+                ],
+                code: `
+let x = 0xFF;
+console.log(x);
+
+`,
+                output: ["255"],
+            },
+        ],
+    },
+
+    //Bigint
+    {
+        sectionTitle: "BigInt",
+        littleTitle: "",
+        description: "BigInt is a new data type (ES2020) that allows you to represent integers larger than 2^53 - 1.",
+        littleSections: [
+            {
+                name: "How to Create a BigInt",
+                descriptions: [
+                    {
+                        desc: "To create a BigInt, append n to the end of an integer or call BigInt()",
+                    },
+                ],
+                code: `
+let x = 1234567890123456789012345n;
+let y = BigInt(1234567890123456789012345)
+
+`,
+                output: "",
+            },
+            {
+                name: "BigInt Decimals",
+                descriptions: [
+                    {
+                        desc: "A BigInt can not have decimals.",
+                    },
+                ],
+                code: `
+let x = 5n;
+let y = x / 2;
+// Error: Cannot mix BigInt and other types, use explicit conversion.
+
+`,
+                output: "",
+            },
+            {
+                name: "BigInt Hex, Octal and Binary",
+                descriptions: [
+                    {
+                        desc: "BigInt can also be written in hexadecimal, octal, or binary notation",
+                    },
+                ],
+                code: `
+let hex = 0x20000000000003n;
+let oct = 0o400000000000000003n;
+let bin = 0b100000000000000000000000000000000000000000000000000011n;
+
+`,
+                output: [],
+            },
+            {
+                name: "Minimum and Maximum Safe Integers",
+                descriptions: [
+                    {
+                        desc: ".",
+                    },
+                ],
+                code: `
+let x = Number.MAX_SAFE_INTEGER;
+let y = Number.MIN_SAFE_INTEGER;
+
+console.log(x);
+console.log(y);
+
+`,
+                output: [9007199254740991, -9007199254740991],
+            },
+            {
+                name: "Number.isInteger()",
+                descriptions: [
+                    {
+                        desc: "The Number.isInteger() method returns true if the argument is an integer.",
+                    },
+                ],
+                code: `
+Number.isInteger(10);
+Number.isInteger(10.5);
+
+`,
+                output: [true, false],
+            },
+            {
+                name: "Number.isSafeInteger()",
+                descriptions: [
+                    {
+                        desc: "A safe integer is an integer that can be exactly represented as a double precision number. The Number.isSafeInteger() method returns true if the argument is a safe integer.",
+                    },
+                ],
+                code: `
+Number.isSafeInteger(10);
+Number.isSafeInteger(12345678901234567890);
+
+`,
+                output: [true, false],
+            },
+        ],
+    },
+
+    //Number Methods
+    {
+        sectionTitle: "Number Methods",
+        littleTitle: "",
+        description: "These number methods can be used on all JavaScript numbers",
+        littleSections: [
+            {
+                name: "toString()",
+                descriptions: [
+                    {
+                        desc: "The toString() method returns a number as a string.",
+                    },
+                ],
+                code: `
+let x = 123;
+x.toString();
+x + 456;
+
+`,
+                output: ["123456"],
+            },
+            {
+                name: "toExponential()",
+                descriptions: [
+                    {
+                        desc: "The toExponential() method returns a string, with a number rounded and written using exponential notation.",
+                    },
+                ],
+                code: `
+let x = 9.656;
+x.toExponential(2);
+x.toExponential(4);
+x.toExponential(6);
+
+`,
+                output: ["9.66e+0", "9.656e+0", "9.6560e+0"],
+            },
+            {
+                name: "toFixed()",
+                descriptions: [
+                    {
+                        desc: "The toFixed() method formats a number using fixed-point notation.",
+                    },
+                ],
+                code: `
+let x = 9.656;
+x.toFixed(0);
+x.toFixed(2);
+x.toFixed(4);
+x.toFixed(6);
+
+`,
+                output: ["10", "9.66", "9.6560", "9.656000"],
+            },
+            {
+                name: "toPrecision()",
+                descriptions: [
+                    {
+                        desc: "The toPrecision() method returns a string, with a number rounded to a specified precision.",
+                    },
+                ],
+                code: `
+let x = 9.656;
+x.toPrecision(2);
+x.toPrecision(4);
+x.toPrecision(6);
+
+`,
+                output: ["9.7", "9.656", "9.6560"],
+            },
+            {
+                name: "valueOf()",
+                descriptions: [
+                    {
+                        desc: "valueOf() returns a number as a number.",
+                    },
+                ],
+                code: `
+let x = 123;
+console.log(x.valueOf());
+
+`,
+                output: [123],
+            },
+            {
+                name: "Number()",
+                descriptions: [
+                    {
+                        desc: "The Number() method can be used to convert JavaScript variables to numbers.",
+                    },
+                ],
+                code: `
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number("10"));
+console.log(Number("John"));
+
+`,
+                output: [1, 0, 10, NaN],
+            },
+            {
+                name: "parseInt()",
+                descriptions: [
+                    {
+                        desc: "parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned",
+                    },
+                ],
+                code: `
+console.log(parseInt("-10.33"));
+console.log(parseInt("10.33"));
+console.log(parseInt("10 20 30"));
+console.log(parseInt("10 years"));
+console.log(parseInt("years 10"));
+
+`,
+                output: [-10, 10, 10, 10, NaN],
+            },
+            {
+                name: "parseFloat()",
+                descriptions: [
+                    {
+                        desc: "parseFloat() parses a string and returns a floating point number. Spaces are allowed. Only the first number is returned",
+                    },
+                ],
+                code: `
+console.log(parseFloat("-10.33"));
+console.log(parseFloat("10.33"));
+console.log(parseFloat("10 20 30"));
+console.log(parseFloat("10 years"));
+console.log(parseFloat("years 10"));
+
+`,
+                output: [-10, 10.33, 10, 10, NaN],
+            },
+        ],
+    },
+
+    //Number Properties
+    {
+        sectionTitle: "Number Properties",
+        littleTitle: "",
+        description: "These number properties can be used on all JavaScript numbers",
+        littleSections: [
+            {
+                name: "EPSILON",
+                descriptions: [
+                    {
+                        desc: "Number.EPSILON is the difference between the smallest floating point number greater than 1 and 1.",
+                    },
+                ],
+                code: `
+let x = Number.EPSILON;
+console.log(x);
+
+`,
+                output: [2.220446049250313e-16],
+            },
+            {
+                name: "MAX_VALUE",
+                descriptions: [
+                    {
+                        desc: "Number.MAX_VALUE is a constant representing the largest possible number in JavaScript.",
+                    },
+                ],
+                code: `
+let x = Number.MAX_VALUE;
+console.log(x);
+
+`,
+                output: [1.7976931348623157e+308],
+            },
+            {
+                name: "MIN_VALUE",
+                descriptions: [
+                    {
+                        desc: "Number.MIN_VALUE is a constant representing the lowest possible number in JavaScript.",
+                    },
+                ],
+                code: `
+let x = Number.MIN_VALUE;
+console.log(x);
+
+`,
+                output: [5e-324],
+            },
+            {
+                name: "MAX_SAFE_INTEGER",
+                descriptions: [
+                    {
+                        desc: "Number.MAX_SAFE_INTEGER represents the maximum safe integer in JavaScript",
+                    },
+                ],
+                code: `
+let x = Number.MAX_SAFE_INTEGER;
+console.log(x);
+
+`,
+                output: [9007199254740991],
+            },
+            {
+                name: "MIN_SAFE_INTEGER",
+                descriptions: [
+                    {
+                        desc: "Number.MIN_SAFE_INTEGER represents the minimum safe integer in JavaScript",
+                    },
+                ],
+                code: `
+let x = Number.MIN_SAFE_INTEGER;
+console.log(x);
+
+`,
+                output: [-9007199254740991],
+            },
+            {
+                name: "POSITIVE_INFINITY",
+                descriptions: [
+                    {
+                        desc: "Number.POSITIVE_INFINITY is a constant representing the positive infinity value.",
+                    },
+                ],
+                code: `
+let x = Number.POSITIVE_INFINITY;
+console.log(x);
+
+`,
+                output: [Infinity],
+            },
+            {
+                name: "NEGATIVE_INFINITY",
+                descriptions: [
+                    {
+                        desc: "Number.NEGATIVE_INFINITY is a constant representing the negative infinity value.",
+                    },
+                ],
+                code: `
+let x = Number.NEGATIVE_INFINITY;
+console.log(x);
+
+`,
+                output: [-Infinity],
+            },
+        ],
+    },
 
 
 ];
