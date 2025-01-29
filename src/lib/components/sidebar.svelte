@@ -112,10 +112,7 @@
                 href="./arrayiteration" 
                 class="text-sm hover:underline {$page.url.pathname.endsWith('arrayiteration') ? 'text-black dark:text-white font-medium underline' : 'text-zinc-600 dark:text-zinc-400'}"
             >Array Iteration</a>
-            <a 
-                href="./arrayconst" 
-                class="text-sm hover:underline {$page.url.pathname.endsWith('arrayconst') ? 'text-black dark:text-white font-medium underline' : 'text-zinc-600 dark:text-zinc-400'}"
-            >Array Const</a>
+            
         </div>
     </div>
 
