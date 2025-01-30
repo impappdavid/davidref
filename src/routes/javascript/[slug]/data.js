@@ -2455,4 +2455,581 @@ console.log(mergedArr);
             
         ],
     },
+
+     //Dates
+     {
+        sectionTitle: "Dates",
+        littleTitle: "",
+        description: "The Date object in JavaScript is used to work with dates and times.",
+        littleSections: [
+            {
+                name: "Creating a Date Object",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const now = new Date();  // Current date and time
+console.log(now); 
+
+`,
+                output: [new Date()],
+            },
+            {
+                name: "You can also create a specific date",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const specificDate = new Date(2024, 0, 15); 
+console.log(specificDate);
+
+`,
+                output: ["Mon Jan 15 2024 00:00:00 GMT+0000 (Coordinated Universal Time)"],
+            },
+            {
+                name: "Or use a date string",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const fromString = new Date("2024-01-15T10:30:00");
+console.log(fromString);
+
+`,
+                output: ["Mon Jan 15 2024 00:00:00 GMT+0000 (Coordinated Universal Time)"],
+            },
+            
+            
+        ],
+    },
+
+    //Date Formats
+    {
+        sectionTitle: "Date Formats",
+        littleTitle: "",
+        description: "JavaScript dates can be formatted in different ways.",
+        littleSections: [
+            {
+                name: "ISO Format (YYYY-MM-DDTHH:MM:SSZ)",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const isoDate = new Date().toISOString();
+console.log(isoDate);
+
+`,
+                output: [new Date().toISOString()],
+            },
+            {
+                name: "UTC Format",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const utcDate = new Date().toUTCString();
+console.log(utcDate); 
+
+`,
+                output: [new Date().toUTCString()],
+            },
+            {
+                name: "Locale String Format",
+                descriptions: [
+                    {
+                        desc: "",
+                    },
+                ],
+                code: `
+const localeDate = new Date().toLocaleString("en-US");
+console.log(localeDate);  
+
+`,
+                output: [new Date().toLocaleString("en-US")],
+            },
+            
+            
+        ],
+    },
+
+    //Date Get Methods
+    {
+        sectionTitle: "Date Get Methods",
+        littleTitle: "",
+        description: "These methods retrieve information from a Date object.",
+        littleSections: [
+            {
+                name: "getFullYear()",
+                descriptions: [
+                    {
+                        desc: "Gets the 4-digit year",
+                    },
+                ],
+                code: `
+const date = new Date();
+console.log(date.getFullYear());
+
+`,
+                output: [new Date().getFullYear()],
+            },
+            {
+                name: "getMonth()",
+                descriptions: [
+                    {
+                        desc: "Gets the month (0-11, where 0 = January)",
+                    },
+                ],
+                code: `
+const date = new Date();       
+console.log(date.getMonth());
+
+`,
+                output: [new Date().getMonth()],
+            },
+            {
+                name: "getDate()",
+                descriptions: [
+                    {
+                        desc: "Gets the day of the month (1-31)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getDate());
+
+`,
+                output: [new Date().getDate()],
+            },
+            {
+                name: "getDay()",
+                descriptions: [
+                    {
+                        desc: "Gets the day of the week (0-6, where 0 = Sunday)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getDay()); 
+
+`,
+                output: [new Date().getDay()],
+            },
+            {
+                name: "getHours()",
+                descriptions: [
+                    {
+                        desc: "Gets the hour (0-23)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getHours()); 
+
+`,
+                output: [new Date().getHours()],
+            },
+            {
+                name: "getMinutes()",
+                descriptions: [
+                    {
+                        desc: "Gets the minutes (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getMinutes()); 
+
+`,
+                output: [new Date().getMinutes()],
+            },
+            {
+                name: "getSeconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the seconds (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getSeconds()); 
+
+`,
+                output: [new Date().getSeconds()],
+            },
+            {
+                name: "getMilliseconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the milliseconds (0-999)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getMilliseconds()); 
+
+`,
+                output: [new Date().getMilliseconds()],
+            },
+            {
+                name: "getTime()",
+                descriptions: [
+                    {
+                        desc: "Gets the time in milliseconds since January 1, 1970",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getTime()); 
+
+`,
+                output: [new Date().getTime()],
+            },
+            {
+                name: "getUTCFullYear()",
+                descriptions: [
+                    {
+                        desc: "Gets the 4-digit year in UTC",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCFullYear()); 
+
+`,
+                output: [new Date().getUTCFullYear()],
+            },
+            {
+                name: "getUTCMonth()",
+                descriptions: [
+                    {
+                        desc: "Gets the month in UTC (0-11, where 0 = January)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCMonth()); 
+
+`,
+                output: [new Date().getUTCMonth()],
+            },
+            {
+                name: "getUTCDate()",
+                descriptions: [
+                    {
+                        desc: "Gets the day of the month in UTC (1-31)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCDate()); 
+
+`,
+                output: [new Date().getUTCDate()],
+            },
+            {
+                name: "getUTCDay()",
+                descriptions: [
+                    {
+                        desc: "Gets the day of the week in UTC (0-6, where 0 = Sunday)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCDay()); 
+
+`,
+                output: [new Date().getUTCDay()],
+            },
+            {
+                name: "getUTCHours()",
+                descriptions: [
+                    {
+                        desc: "Gets the hour in UTC (0-23)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCHours()); 
+
+`,
+                output: [new Date().getUTCHours()],
+            },
+            {
+                name: "getUTCMinutes()",
+                descriptions: [
+                    {
+                        desc: "Gets the minutes in UTC (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCMinutes()); 
+
+`,
+                output: [new Date().getUTCMinutes()],
+            },
+            {
+                name: "getUTCSeconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the seconds in UTC (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCSeconds()); 
+
+`,
+                output: [new Date().getUTCSeconds()],
+            },
+            {
+                name: "getUTCMilliseconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the milliseconds in UTC (0-999)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+console.log(date.getUTCMilliseconds()); 
+
+`,
+                output: [new Date().getUTCMilliseconds()],
+            },
+            
+            
+        ],
+    },
+
+    //Date Set Methods
+    {
+        sectionTitle: "Date Set Methods",
+        littleTitle: "",
+        description: "These methods set information in a Date object.",
+        littleSections: [
+            {
+                name: "setFullYear()",
+                descriptions: [
+                    {
+                        desc: "Sets the 4-digit year",
+                    },
+                ],
+                code: `
+const date = new Date();
+date.setFullYear(2025);
+
+`,
+                output: [],
+            },
+            {
+                name: "setMonth()",
+                descriptions: [
+                    {
+                        desc: "Sets the month (0-11, where 0 = January)",
+                    },
+                ],
+                code: `
+const date = new Date();       
+date.setMonth(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "setDate()",
+                descriptions: [
+                    {
+                        desc: "Sets the day of the month (1-31)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setDate(1);
+
+`,
+                output: [],
+            },
+            
+            {
+                name: "setHours()",
+                descriptions: [
+                    {
+                        desc: "Sets the hour (0-23)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setHours(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getMinutes()",
+                descriptions: [
+                    {
+                        desc: "Gets the minutes (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setMinutes(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getSeconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the seconds (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setSeconds(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getMilliseconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the milliseconds (0-999)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setMilliseconds(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getTime()",
+                descriptions: [
+                    {
+                        desc: "Gets the time in milliseconds since January 1, 1970",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setTime(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCFullYear()",
+                descriptions: [
+                    {
+                        desc: "Gets the 4-digit year in UTC",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCFullYear(2025);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCMonth()",
+                descriptions: [
+                    {
+                        desc: "Gets the month in UTC (0-11, where 0 = January)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCMonth(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCDate()",
+                descriptions: [
+                    {
+                        desc: "Gets the day of the month in UTC (1-31)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCDate(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCHours()",
+                descriptions: [
+                    {
+                        desc: "Gets the hour in UTC (0-23)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCHours(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCMinutes()",
+                descriptions: [
+                    {
+                        desc: "Gets the minutes in UTC (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCMinutes(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCSeconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the seconds in UTC (0-59)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCSeconds(1);
+
+`,
+                output: [],
+            },
+            {
+                name: "getUTCMilliseconds()",
+                descriptions: [
+                    {
+                        desc: "Gets the milliseconds in UTC (0-999)",
+                    },
+                ],
+                code: `
+const date = new Date();  
+date.setUTCMilliseconds(1);
+
+`,
+                output: [],
+            },
+            
+            
+        ],
+    },
 ];
