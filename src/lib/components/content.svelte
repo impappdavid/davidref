@@ -4,6 +4,7 @@
     import { page } from "$app/stores";
     import { data } from "../../routes/javascript/[slug]/data";
     import { onMount, afterUpdate } from "svelte";
+    import * as Table from "$lib/components/ui/table";
 
     // Make this reactive by using $:
     $: slug = $page.params.slug;
@@ -67,6 +68,27 @@
                             </div>
                         </div>
                     {/each}
+                    {#if section.table}
+                    <Table.Root class="rounded-xl border z-10">
+                        <Table.Header class="border-b border-zinc-800 bg-slate-700 dark:bg-zinc-950  rounded-t-xl">
+                          <Table.Row class="rounded-xl hover:bg-slate-900/50 dark:hover:bg-zinc-900/60  bg-slate-900/50 dark:bg-zinc-900/60 rounded-t-xl">
+                            {#each section.table[0].header as header}
+                                <Table.Head class="w-[100px] text-zinc-400">{header}</Table.Head>
+                            {/each}
+                          </Table.Row>
+                        </Table.Header>
+                        <Table.Body class="bg-slate-500 dark:bg-zinc-900/60">
+                            {#each section.table[0].body as row}
+                              <Table.Row class="bg-slate-900/50 dark:bg-zinc-900 text-zinc-400 hover:bg-slate-900/50 dark:hover:bg-zinc-900/60  text-xs">
+                                {#each row as cell}
+                                    <Table.Cell>{@html cell}</Table.Cell>
+                                {/each}
+                              </Table.Row>
+                            {/each}
+                        </Table.Body>
+                      </Table.Root>
+                    {/if}
+
 
                     {#if section.code}
                         <CodeCard code={section.code} output={section.output} />

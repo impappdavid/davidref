@@ -9,7 +9,7 @@
 </script>
 
 <div
-    class="w-full border-b flex justify-center sticky top-0 backdrop-blur-lg bg-zinc-100/90 dark:bg-zinc-950/90"
+    class="w-full border-b flex justify-center sticky top-0 backdrop-blur-lg bg-zinc-100/90 dark:bg-zinc-950/90 z-50"
 >
     <div class="w-full py-2 px-4 max-w-screen-xl flex gap-6 justify-between">
         <div class="w-full flex gap-6 items-center sm:flex hidden">
