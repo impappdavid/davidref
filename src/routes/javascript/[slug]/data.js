@@ -4165,4 +4165,409 @@ date.setUTCMilliseconds(1);
 
         ],
     },
+
+    //Math
+    {
+        sectionTitle: "Math",
+        littleTitle: "",
+        description: "The Math object provides properties and methods for mathematical constants and functions.",
+        littleSections: [
+            {
+                name: "Math Properties",
+
+                descriptions: [
+                    {
+                        desc: "",
+
+                    },
+                ],
+                table: [
+                    {
+                        header: ["Property", "Description"],
+                        body: [
+
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.E</span>", "Returns Euler's number"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.PI</span>", "Returns the value of π"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.SQRT2</span>", "Returns the square root of 2"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.SQRT1_2</span>", "Returns the square root of 1/2"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.LN2</span>", "Returns the natural logarithm of 2"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.LN10</span>", "Returns the natural logarithm of 10"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.LOG2E</span>", "Returns the base 2 logarithm of E"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.LOG10E</span>", "Returns the base 10 logarithm of E"],
+                        ],
+
+
+
+                    },
+
+                ],
+                code: ``,
+                output: [],
+            },
+            {
+                name: "Math Methods",
+                descriptions: [
+                    {
+                        desc: "The syntax for Math any methods is : Math.method(number)",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: ``,
+                output: [],
+            },
+            {
+                name: "Number to Integer",
+                descriptions: [
+                    {
+                        desc: "There are 4 common methods to round a number to an integer.",
+                    },
+                ],
+                table: [
+                    {
+                        header: ["Method", "Description"],
+                        body: [
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.round(x)</span>", "Rounds to the nearest integer"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.ceil(x)</span>", "Rounds up to the nearest integer"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Math.floor(x)</span>", "Rounds down to the nearest integer"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>Number(x)</span>", "Converts to a number and rounds to the nearest integer"],
+                        ],
+                    },
+
+
+                ],
+                code: ``,
+                output: [],
+            },
+            {
+                name: "Math.round()",
+                descriptions: [
+                    {
+                        desc: "Math.round(x) returns the nearest integer.",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.round(4.6));
+console.log(Math.round(4.5));
+console.log(Math.round(4.4));
+
+`,
+                output: [5, 5, 4],
+            },
+
+            {
+                name: "Math.ceil()",
+                descriptions: [
+                    {
+                        desc: "Math.ceil(x) returns the value of x rounded up to its nearest integer",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.ceil(4.1));
+console.log(Math.ceil(4.9));
+console.log(Math.ceil(4.5));
+
+`,
+                output: [5, 5, 5],
+            },
+
+            {
+                name: "Math.floor()",
+                descriptions: [
+                    {
+                        desc: "Math.floor(x) returns the value of x rounded down to its nearest integer.",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.floor(4.1));
+console.log(Math.floor(4.9));
+console.log(Math.floor(4.5));
+
+`,
+                output: [4, 4, 4],
+            },
+            {
+                name: "Math.trunc()",
+
+                descriptions: [
+                    {
+                        desc: "Math.trunc(x) returns the integer part of x",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.trunc(4.1));   
+console.log(Math.trunc(4.9));
+console.log(Math.trunc(4.5));
+
+`,
+                output: [4, 4, 4],
+
+            },
+            {
+                name: "Math.sign()",
+                descriptions: [
+                    {
+                        desc: "Math.sign(x) returns if x is negative, null or positive",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.sign(-4));
+console.log(Math.sign(0));
+console.log(Math.sign(4));
+
+`,
+                output: [-1, 0, 1],
+
+            },
+            {
+                name: "Math.pow()",
+                descriptions: [
+                    {
+                        desc: "Math.pow(x, y) returns the value of x to the power of y.",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.pow(8, 2));
+
+`,
+                output: [64],
+
+            },
+            {
+                name: "Math.sqrt()",
+                descriptions: [
+                    {
+                        desc: "Math.sqrt(x) returns the square root of x.",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.sqrt(16));
+
+`,
+                output: [4],
+
+            },
+            {
+                name: "Math.abs()",
+                descriptions: [
+                    {
+                        desc: "Math.abs(x) returns the absolute (positive) value of x",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.abs(-4.7));
+
+`,
+                output: [4.7],
+
+            },
+            {
+                name: "Math.sin()",
+                descriptions: [
+                    {
+                        desc: "Math.sin(x) returns the sine of x (x is in radians). If you want to use degrees instead of radians, you have to convert degrees to radians: Angle in radians = Angle in degrees x PI / 180.",
+                    },
+
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.sin(90));
+
+Math.sin(90 * Math.PI / 180);     // returns 1 (the sine of 90 degrees)
+
+`,
+                output: [1],
+            },
+            {
+                name: "Math.cos()",
+
+                descriptions: [
+                    {
+                        desc: "Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians). If you want to use degrees instead of radians, you have to convert degrees to radians: Angle in radians = Angle in degrees x PI / 180.",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.cos(90));
+
+Math.cos(90 * Math.PI / 180);     // returns 0 (the cosine of 90 degrees)
+
+`,
+                output: [0],
+
+            },
+            {
+                name: "Math.min() and Math.max()",
+                descriptions: [
+                    {
+                        desc: "Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.min(0, 150, 30, 20, -8, -200));
+console.log(Math.max(0, 150, 30, 20, -8, -200));
+
+`,
+                output: [-200, 150],
+
+            },
+            {
+                name: "Math.random()",
+                descriptions: [
+                    {
+                        desc: "Math.random() returns a random number between 0 (inclusive), and 1 (exclusive).",
+                    },
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.random());
+
+`,
+                output: [0.123456789],
+
+            },
+            {
+                name: "Math.log()",
+                descriptions: [
+                    {
+                        desc: "Math.log(x) returns the natural logarithm of x.",
+                    },
+
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.log(1));
+
+`,
+                output: [0],
+
+            },
+            {
+                name: "Math.log2()",
+                descriptions: [
+                    {
+                        desc: "Math.log2(x) returns the base 2 logarithm of x.",
+
+                    },
+
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.log2(2));
+
+`,
+                output: [1],
+
+            },
+            {
+                name: "Math.log10()",
+                descriptions: [
+                    {
+                        desc: "Math.log10(x) returns the base 10 logarithm of x.",
+
+
+                    },
+
+                ],
+                table: [
+                    {
+                        header: [],
+                        body: [],
+                    },
+                ],
+                code: `
+console.log(Math.log10(1000));
+
+
+`,
+            output: [3],
+
+            },
+
+
+        ],
+    },
 ];
