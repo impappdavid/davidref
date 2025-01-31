@@ -55,7 +55,7 @@
         </div>
         <div class="flex flex-col gap-0">
             {#each currentSection.littleSections as section (section.name)}
-                <div class="flex flex-col " id={section.name}>
+                <div class="flex flex-col gap-2" id={section.name}>
                     <div class="font-semibold text-xl mt-14" >
                         {section.name}
                     </div>

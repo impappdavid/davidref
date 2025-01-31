@@ -145,20 +145,22 @@ console.log(age);
                 ],
                 table: [
                     {
-                        header: [],
-                        body: [],
-                    },
-                ],
-                code: `
-+ //addition
-- //subtraction
-* //multiplication
-/ //division
-% //modulus
-++ //increment
--- //decrement  
+                        header: ["Operator", "Description"],
+                        body: [
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>+</span>", "addition"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>-</span>", "subtraction"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>*</span>", "multiplication"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>/</span>", "division"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>%</span>", "modulus"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>++</span>", "increment"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>--</span>", "decrement"],
+                        ],
 
-`,
+
+                    },
+
+                ],
+                code: ``,
                 output: [],
             },
             {
@@ -170,19 +172,18 @@ console.log(age);
                 ],
                 table: [
                     {
-                        header: [],
-                        body: [],
+                        header: ["Operator", "Description"],
+                        body: [
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>=</span>", "assign"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>+=</span>", "add and assign"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>-=</span>", "subtract and assign"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>*=</span>", "multiply and assign"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>/=</span>", "divide and assign"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>%=</span>", "modulus and assign"],
+                        ],
                     },
                 ],
-                code: `
-= //assign
-+= //add and assign
--= //subtract and assign
-*= //multiply and assign
-/= //divide and assign
-%= //modulus and assign
-
-`,
+                code: ``,
                 output: [],
             },
             {
@@ -194,21 +195,21 @@ console.log(age);
                 ],
                 table: [
                     {
-                        header: [],
-                        body: [],
+                        header: ["Operator", "Description"],
+                        body: [
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>==</span>", "equal"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>===</span>", "strict equal"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>!=</span>", "not equal"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>!==</span>", "strict not equal"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>></span>", "greater than"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'><</span>", "less than"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'>>=</span>", "greater than or equal to"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800'><=</span>", "less than or equal to"],
+                        ],
                     },
                 ],
-                code: `
-== //equal
-=== //strict equal
-!= //not equal
-!== //strict not equal
-> //greater than
-< //less than
->= //greater than or equal to
-<= //less than or equal to
 
-`,
+                code: ``,
                 output: [],
             },
             {
@@ -220,16 +221,16 @@ console.log(age);
                 ],
                 table: [
                     {
-                        header: [],
-                        body: [],
+                        header: ["Operator", "Description"],
+                        body: [
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800 '>&&</span>", "AND"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800 '>||</span>", "OR"],
+                            ["<span class='px-2 py-0.5 rounded-md bg-slate-900/50 text-zinc-300 dark:bg-zinc-800 '>!</span>", "NOT"],
+                        ],
+
                     },
                 ],
-                code: `
-&& //AND
-|| //OR
-! //NOT
-
-`,
+                code: ``,
                 output: [],
             },
             {
@@ -904,23 +905,21 @@ console.log(message);
                 ],
                 table: [
                     {
-                        header: [],
-                        body: [],
+                        header: ["Character", "Description"],
+                        body: [
+                            ["\\b", "Backspace"],
+                            ["\\t", "Tab"],
+                            ["\\n", "New line"],
+                            ["\\r", "Carriage return"],
+                            ["\\'", "Single quote"],
+                            ["\\\"", "Double quote"],
+                            ["\\", "Backslash"],
+                        ],
                     },
+
+
                 ],
                 code: `
-/*
-Examples
-
-\\b - Backspace
-\\t - Tab
-\\n - New line
-\\r - Carriage return
-\\' - Single quote
-\\" - Double quote
-\\ - Backslash
-*/
-
 let message = "He said, \\'Hello!\\'";
 console.log(message);
 
